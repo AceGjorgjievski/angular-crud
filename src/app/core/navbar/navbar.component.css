@@ -1,4 +1,10 @@
 .full-height {
-    height: calc(100vh - 60px); /* Adjust 60px based on actual header height */
-    overflow: hidden; /* Prevents scrolling overflow */
+    height: calc(100vh - 57px);
+    overflow: hidden;
+}
+
+.main-content {
+    overflow-y: auto; /* Enable scrolling in the main content */
+    max-height: 100%;
+    padding-right: 10px;
 }

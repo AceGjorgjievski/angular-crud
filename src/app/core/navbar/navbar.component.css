@@ -1,0 +1,4 @@
+.full-height {
+    height: calc(100vh - 60px); /* Adjust 60px based on actual header height */
+    overflow: hidden; /* Prevents scrolling overflow */
+}

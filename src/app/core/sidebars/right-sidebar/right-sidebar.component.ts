@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-form',
+  selector: 'app-right-sidebar',
   imports: [
     RouterLink,
     RouterOutlet,
     RouterLinkActive
   ],
-  templateUrl: './form.component.html',
-  styleUrl: './form.component.css'
+  templateUrl: './right-sidebar.component.html',
+  styleUrl: './right-sidebar.component.css'
 })
-export class FormComponent {
+export class RightSidebarComponent {
 
 }

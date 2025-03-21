@@ -1,16 +1,18 @@
-<p>home works!</p>
+<div *ngIf="successMessage" class="alert alert-success" role="alert">
+    {{ successMessage }}
+</div>
 <p>photos length: {{ photos.length }}</p>
 
 <div class="d-flex justify-content-center my-5"
 *ngFor="let photo of photos">
   <div class="card" style="width: 18rem">
-    <img [src]="photo.thumbnailUrl" class="card-img-top" alt="image photo" />
+    <img [src]="photo.url" class="card-img-top" alt="image photo" />
     <div class="card-body">
       <h5 class="card-title">{{photo.title}}</h5>
       <p class="card-text">
         Sample description.
       </p>
-      <a href="#" class="btn btn-primary">Edit</a>
+      <a [routerLink]="['/', photo.id, 'edit']" routerLinkActive="router-link-active" class="btn btn-primary">Edit</a>
     </div>
   </div>
 </div>

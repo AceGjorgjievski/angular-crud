@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="form-group">
+    <label for="title">Id:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="id"
+      name="id"
+      aria-describedby="id"
+      [(ngModel)]="photo.id"
+      disabled="true"
+    />
+  </div>
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      name="title"
+      aria-describedby="title"
+      placeholder="Enter Title"
+      [(ngModel)]="photo.title"
+      disabled="true"
+    />
+  </div>
+  <div class="form-group">
+    <label for="image">Image:</label>
+    <img [src]="photo.url" class="card-img-top" alt="image photo" />
+  </div>
+  <div class="form-group">
+    <label for="title">Album id:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="album-id"
+      name="album-id"
+      [(ngModel)]="photo.albumId"
+      disabled="true"
+    />
+  </div>
+  <div class="d-flex justify-content-between">
+    <button (click)="deletePhoto()" class="btn btn-danger">Delete</button>
+    <a [routerLink]="['/home']" class="btn btn-primary">Back</a>
+  </div>
+</div>

@@ -12,7 +12,10 @@
       <p class="card-text">
         Sample description.
       </p>
-      <a [routerLink]="['/', photo.id, 'edit']" routerLinkActive="router-link-active" class="btn btn-primary">Edit</a>
+      <div class="d-flex justify-content-between">
+        <a [routerLink]="['/', photo.id, 'edit']" class="btn btn-primary">Edit</a>
+        <a [routerLink]="['/', photo.id, 'details']" class="btn btn-info">Details</a>
+      </div>
     </div>
   </div>
 </div>

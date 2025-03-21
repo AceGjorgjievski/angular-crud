@@ -9,5 +9,6 @@ export const routes: Routes = [
     { path: 'add',  component: FormComponent},
     { path: ':id/edit',  component: FormComponent},
 
-    { path: '**', component: NotFoundComponent }
+    { path: 'not-found', component: NotFoundComponent },
+    { path: '**', redirectTo: 'not-found' }
 ];

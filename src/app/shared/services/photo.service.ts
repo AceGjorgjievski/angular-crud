@@ -22,7 +22,7 @@ export class PhotoService {
 
     return new Observable((observer) => {
       this.httpClient.get<Photo[]>(this.apiUrl).subscribe((data) => {
-        this.photos = data.slice(0, 10);
+        this.photos = data.slice(0, 30);
         observer.next(this.photos);
         observer.complete();
       })

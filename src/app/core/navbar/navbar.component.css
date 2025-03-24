@@ -1,6 +1,6 @@
 .full-height {
-    height: calc(100vh - 57px);
-    overflow: hidden;
+    min-height: 100vh; /* Ensures full height but prevents overflow */
+    height: auto; /* Prevents unnecessary extra space */
 }
 
 .main-content {

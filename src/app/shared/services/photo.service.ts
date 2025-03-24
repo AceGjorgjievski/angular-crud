@@ -60,14 +60,19 @@ export class PhotoService {
   }
 
   deletePhoto(id: number): Observable<boolean> {
-    const index = this.photos.findIndex((photo) => photo.id === id);
-
-    if(index !== -1) {
-      this.photos.splice(index, 1);
-      return of(true);
-    }
-
-    return of(false);
+    return new Observable((observer) => {
+      this.httpClient.delete<Photo>(`${this.apiUrl}/${id}`).subscribe({
+        next: () => {
+          this.photos = this.photos.filter(photo => photo.id !== id);
+          observer.next(true);
+          observer.complete();
+        },
+        error: () => {
+          observer.next(false);
+          observer.complete();
+        }
+      })
+    })
   }
 
   editPhoto(id: number, photo: Photo): Observable<Photo | null> {
